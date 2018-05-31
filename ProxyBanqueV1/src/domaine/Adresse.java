@@ -47,7 +47,7 @@ public class Adresse {
 		this.ville = ville;
 	}
 	
-	//---------- Methode toString
+	//---------- Reecriture de la methode toString
 	
 	@Override
 	public String toString() {
