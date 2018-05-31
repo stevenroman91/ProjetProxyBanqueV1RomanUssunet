@@ -8,10 +8,7 @@ public class Compte {
 	protected double solde=0.;
 	protected String dateOuvertureCompte;
 	
-	
-	//---------- Constructeurs de la Classe Adresse
-	
-	
+		
 	
 	//---------- Getters & Setters
 
@@ -33,7 +30,5 @@ public class Compte {
 	public void setDateOuvertureCompte(String dateOuvertureCompte) {
 		this.dateOuvertureCompte = dateOuvertureCompte;
 	}
-	
-	//---------- Methode toString
 	
 }
