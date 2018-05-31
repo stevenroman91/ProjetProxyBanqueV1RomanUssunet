@@ -1,7 +1,5 @@
 package service;
 
-import java.util.ArrayList;
-import java.util.Collection;
 import java.util.Hashtable;
 import java.util.Map;
 
@@ -12,8 +10,8 @@ import domaine.Client;
 import domaine.Compte;
 import domaine.ConseillerClientele;
 import domaine.Gerant;
-import domaine.Placement;
 import domaine.Personne;
+import domaine.Placement;
 import domaine.SimulationCredit;
 
 public class ServiceImpl implements IService {
@@ -111,7 +109,7 @@ public class ServiceImpl implements IService {
 	@Override
 	public Map<Integer, Compte> createCompte(Compte c) {
 		// TODO Auto-generated method stub
-		
+
 		return null;
 	}
 
@@ -123,10 +121,9 @@ public class ServiceImpl implements IService {
 	}
 
 	@Override
-	public void updateCompte(Compte c, double taux, double decouvert ) {
+	public void updateCompte(Compte c, double taux, double decouvert) {
 		// TODO Auto-generated method stub
 
-		
 	}
 
 	@Override
@@ -139,31 +136,37 @@ public class ServiceImpl implements IService {
 	@Override
 	public void crediterCompte(Compte c, double montant) {
 		// TODO Auto-generated method stub
-
+		c.getSolde() += montant; //Besoin d'implémentation solde ??
 	}
 
 	@Override
 	public void debiterCompte(Compte c, double montant) {
 		// TODO Auto-generated method stub
+		if (montant < c.getSolde()) {
+			c.getSolde() -= montant; //Besoin d'implémentation solde ??
+		}
 
 	}
 
 	@Override
 	public void ajouterCarteBancaire(Compte c, CarteBancaire ca) {
 		// TODO Auto-generated method stub
+		c.setCarte(ca);
+		ca.setCompte(c);
 
 	}
 
 	@Override
-	public Map<Integer, SimulationCredit> createSimulationCredit(SimulationCredit sim) {
+	public void createSimulationCredit(SimulationCredit sim) {
 		// TODO Auto-generated method stub
-		return null;
+				
 	}
 
 	@Override
 	public void readSimulationCredit(SimulationCredit sim) {
 		// TODO Auto-generated method stub
-
+		System.out.println(sim.toString());
+		
 	}
 
 	@Override
@@ -185,26 +188,29 @@ public class ServiceImpl implements IService {
 	}
 
 	@Override
-	public Map<Integer, domaine.CarteBancaire> CarteBancaire(domaine.CarteBancaire carte) {
+	public void createCarteBancaire(CarteBancaire carte) {
 		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public void readCarteBancaire(domaine.CarteBancaire carte) {
-		// TODO Auto-generated method stub
+		
 
 	}
 
 	@Override
-	public void updateCarteBancaire(domaine.CarteBancaire carte) {
+	public void readCarteBancaire(CarteBancaire carte) {
+		// TODO Auto-generated method stub
+		System.out.println(carte.toString());
+
+	}
+
+	@Override
+	public void updateCarteBancaire(CarteBancaire carte) {
 		// TODO Auto-generated method stub
 
 	}
 
 	@Override
-	public void deleteCarteBancaire(domaine.CarteBancaire carte) {
+	public void deleteCarteBancaire(CarteBancaire carte) {
 		// TODO Auto-generated method stub
+		carte.setEtatCarte(false);
 
 	}
 
@@ -228,10 +234,10 @@ public class ServiceImpl implements IService {
 
 	@Override
 	public void ajouterPlacement(Client cl, Placement gp) {
-		
+
 		cl.getPlacements().add(gp);
 		gp.setClient(cl);
-		
+
 	}
 
 }

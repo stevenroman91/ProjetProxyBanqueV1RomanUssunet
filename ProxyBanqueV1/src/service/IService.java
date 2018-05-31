@@ -8,8 +8,8 @@ import domaine.CarteBancaire;
 import domaine.Client;
 import domaine.Compte;
 import domaine.ConseillerClientele;
-import domaine.Placement;
 import domaine.Personne;
+import domaine.Placement;
 import domaine.SimulationCredit;
 
 public interface IService {
@@ -41,25 +41,25 @@ public interface IService {
 	public void updateCompte(Compte c, double taux, double decouvert );//Implementation possible dans une prochaine version
 	public void deleteCompte(Compte c, Client cl);//Fait mais supprime seulement le compte de la liste des compte du client
 	
-	public void crediterCompte(Compte c, double montant);
-	public void debiterCompte(Compte c, double montant);
-	public void ajouterCarteBancaire(Compte c, CarteBancaire ca);
+	public void crediterCompte(Compte c, double montant);//Problème de variable, instanciation compte pour getSolde ??
+	public void debiterCompte(Compte c, double montant);//Problème de variable, instanciation compte pour getSolde ??
+	public void ajouterCarteBancaire(Compte c, CarteBancaire ca);//fait
 	
 	
 	// Crud pour l'objet CarteBancaire
 	
-	public Map<Integer, CarteBancaire> CarteBancaire(CarteBancaire carte); 
-	public void readCarteBancaire(CarteBancaire carte);
+	public void createCarteBancaire(CarteBancaire carte);//creation = instanciation ??
+	public void readCarteBancaire(CarteBancaire carte);//fait
 	public void updateCarteBancaire(CarteBancaire carte);
-	public void deleteCarteBancaire(CarteBancaire carte);
+	public void deleteCarteBancaire(CarteBancaire carte);//fait
 	
 	
 	// Crud pour l'objet Simulation Credit
 	
-	public Map<Integer, SimulationCredit> createSimulationCredit(SimulationCredit sim); 
-	public void readSimulationCredit(SimulationCredit sim);
-	public void updateSimulationCredit(SimulationCredit sim );
-	public void deleteSimulationCredit(SimulationCredit sim );
+	public void createSimulationCredit(SimulationCredit sim);//Implémentation mensualites (résultat du calcul de la simu) ??
+	public void readSimulationCredit(SimulationCredit sim);//fait
+	public void updateSimulationCredit(SimulationCredit sim );//useless
+	public void deleteSimulationCredit(SimulationCredit sim );//useless
 	
 	
 	// Crud pour l'object Placement

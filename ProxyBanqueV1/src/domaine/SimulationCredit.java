@@ -8,18 +8,28 @@ public class SimulationCredit {
 	private double taux;
 	private int duree;
 	private boolean typeDeCredit;
+	//private double mensualite;
 
 	//---------- Constructeur de la Classe SimulationCredit
 	
-	public SimulationCredit(double montant, double taux, int duree, boolean typeDeCredit) {
+	public SimulationCredit(double montant, double taux, int duree, boolean typeDeCredit) {//, double mensualite
 		super();
 		this.montant = montant;
 		this.taux = taux;
 		this.duree = duree;
 		this.typeDeCredit = typeDeCredit;
+		//this.mensualite = mensualite;
 	}
 	
 	//---------- Getters & Setters
+	
+	/*public double getMensualite() {
+		return mensualite;
+	}
+
+	public void setMensualite(double mensualite) {
+		this.mensualite = mensualite;
+	}*/
 	
 	public double getMontant() {
 		return montant;
