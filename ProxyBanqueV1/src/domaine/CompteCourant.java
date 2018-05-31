@@ -29,6 +29,6 @@ public class CompteCourant extends Compte {
 
 	@Override
 	public String toString() {
-		return "CompteCourant [numeroDeCompte = " + numeroDeCompte + " ; dateOuvertureCompte = "+dateOuvertureCompte + " ; decouvert=" + decouvert + "]";
+		return "CompteCourant [Numéro de compte = "+ super.numeroDeCompte + "Solde = "+ super.solde + "numeroDeCompte = " + numeroDeCompte + " ; dateOuvertureCompte = "+dateOuvertureCompte + " ; decouvert=" + decouvert + "]";
 	}
 }

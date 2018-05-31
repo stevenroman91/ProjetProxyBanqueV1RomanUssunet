@@ -36,12 +36,11 @@ public interface IService {
 	
 	// Crud pour l'objet Compte
 	
-	public Map<Integer, Compte> createCompte(Compte c); 
-	public void readCompte();
-	public void updateCompte(Compte c);
-	public void deleteCompte(Compte c);
+	public Map<Integer, Compte> createCompte(Compte c); //Questions à poser a Eddy
+	public void readCompte(Compte c); //fait
+	public void updateCompte(Compte c, double taux, double decouvert );//Implementation possible dans une prochaine version
+	public void deleteCompte(Compte c, Client cl);//Fait mais supprime seulement le compte de la liste des compte du client
 	
-	public void listeCompte(Map<Integer, Compte> comptes); //new
 	public void crediterCompte(Compte c, double montant);
 	public void debiterCompte(Compte c, double montant);
 	public void ajouterCarteBancaire(Compte c, CarteBancaire ca);

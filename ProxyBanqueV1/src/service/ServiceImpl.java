@@ -111,30 +111,28 @@ public class ServiceImpl implements IService {
 	@Override
 	public Map<Integer, Compte> createCompte(Compte c) {
 		// TODO Auto-generated method stub
+		
 		return null;
 	}
 
 	@Override
-	public void readCompte() {
+	public void readCompte(Compte c) {
 		// TODO Auto-generated method stub
+		System.out.println(c.toString());
 
 	}
 
 	@Override
-	public void updateCompte(Compte c) {
+	public void updateCompte(Compte c, double taux, double decouvert ) {
 		// TODO Auto-generated method stub
 
+		
 	}
 
 	@Override
-	public void deleteCompte(Compte c) {
+	public void deleteCompte(Compte c, Client cl) {
 		// TODO Auto-generated method stub
-
-	}
-
-	@Override
-	public void listeCompte(Map<Integer, Compte> comptes) {
-		// TODO Auto-generated method stub
+		cl.getComptes().remove(c);
 
 	}
 
