@@ -41,16 +41,14 @@ public class ConseillerClientele extends Personne {
 	public void setClients(Collection<Client> clients) {
 		this.clients = clients;
 	}
-
+	
+	//---------- Reecriture de la methode toString
+	
 	@Override
 	public String toString() {
 		return "ConseillerClientele [idConseillerClientele=" + idConseillerClientele + ", nom="
 				+ nom + ", prenom=" + prenom  + "]";
 	}
-	
-	//---------- Reecriture de la methode toString
-	
-	
 	
 }
 	
