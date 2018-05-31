@@ -7,16 +7,16 @@ public class SimulationCredit {
 	private double montant;
 	private double taux;
 	private int duree;
-	private boolean typedeCredit;
+	private boolean typeDeCredit;
 
 	//---------- Constructeur de la Classe SimulationCredit
 	
-	public SimulationCredit(double montant, double taux, int duree, boolean typedeCredit) {
+	public SimulationCredit(double montant, double taux, int duree, boolean typeDeCredit) {
 		super();
 		this.montant = montant;
 		this.taux = taux;
 		this.duree = duree;
-		this.typedeCredit = typedeCredit;
+		this.typeDeCredit = typeDeCredit;
 	}
 	
 	//---------- Getters & Setters
@@ -45,12 +45,12 @@ public class SimulationCredit {
 		this.duree = duree;
 	}
 
-	public boolean isTypedeCredit() {
-		return typedeCredit;
+	public boolean isTypeDeCredit() {
+		return typeDeCredit;
 	}
 
-	public void setTypedeCredit(boolean typedeCredit) {
-		this.typedeCredit = typedeCredit;
+	public void setTypeDeCredit(boolean typedeCredit) {
+		this.typeDeCredit = typedeCredit;
 	}
 	
 	//---------- Reecriture de la methode toString
@@ -58,7 +58,7 @@ public class SimulationCredit {
 	@Override
 	public String toString() {
 		return "SimulationCredit [montant=" + montant + ", taux=" + taux + ", duree=" + duree + ", typedeCredit="
-				+ typedeCredit + "]";
+				+ typeDeCredit + "]";
 	}
 
 
