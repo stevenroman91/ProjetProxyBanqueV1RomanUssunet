@@ -31,4 +31,12 @@ public class Compte {
 		this.dateOuvertureCompte = dateOuvertureCompte;
 	}
 	
+	// ---------- Reecriture de la methode toString
+	
+	@Override
+	public String toString() {
+		return "Compte [numeroDeCompte=" + numeroDeCompte + ", solde=" + solde + ", dateOuvertureCompte="
+				+ dateOuvertureCompte + "]";
+	}
+	
 }

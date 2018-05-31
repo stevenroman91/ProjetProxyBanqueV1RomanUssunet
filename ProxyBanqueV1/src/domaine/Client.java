@@ -63,14 +63,12 @@ public class Client extends Personne {
 	public void setComptes(Collection<Compte> comptes) {
 		this.comptes = comptes;
 	}
-
+	
+	//---------- Reecriture de la methode toString
+	
 	@Override
 	public String toString() {
 		return "Client: nom " + super.nom + ",prenom " + super.prenom +",adresse " + super.adresse+ ", typeDeClient=" + typeDeClient;
 				}
-	
-	//---------- Reecriture de la methode toString
-	
-	
 
 }

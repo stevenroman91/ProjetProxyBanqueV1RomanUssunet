@@ -25,7 +25,7 @@ public class CompteCourant extends Compte {
 		this.decouvert = decouvert;
 	}
 
-	// ---------- Methode toString
+	// ---------- Reecriture de la methode toString
 
 	@Override
 	public String toString() {
