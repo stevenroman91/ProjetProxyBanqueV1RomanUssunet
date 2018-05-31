@@ -43,7 +43,7 @@ public class ConseillerClientele extends Personne {
 	}
 	
 	//---------- Reecriture de la methode toString
-	
+
 	@Override
 	public String toString() {
 		return "ConseillerClientele [idConseillerClientele=" + idConseillerClientele + ", nom="

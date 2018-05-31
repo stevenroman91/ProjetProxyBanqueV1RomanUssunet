@@ -10,8 +10,13 @@ public class CarteBancaire {
 	private String dateCreation;
 	private String dateExpiration;
 	private int cryptogramme;
+	private boolean etatCarte;
 	
 	//---------- Constructeur de la classe carte
+	
+	public CarteBancaire() {
+		super();
+	}
 	
 	public CarteBancaire(Compte compte, boolean typeDeCarte) {
 		super();
@@ -57,6 +62,14 @@ public class CarteBancaire {
 	}
 	public void setCryptogramme(int cryptogramme) {
 		this.cryptogramme = cryptogramme;
+	}
+	
+	public boolean isEtatCarte() {
+		return etatCarte;
+	}
+
+	public void setEtatCarte(boolean etatCarte) {
+		this.etatCarte = etatCarte;
 	}
 	
 	//---------- Reecriture de la methode toString

@@ -2,6 +2,7 @@ package service;
 
 import java.util.Map;
 
+import domaine.Adresse;
 import domaine.Agence;
 import domaine.CarteBancaire;
 import domaine.Client;
@@ -15,23 +16,23 @@ public interface IService {
 	
 	//Crud pour l'objet Agence()
 	
-	public void createAgence(Agence a);
+	public Map<String, Agence> createAgence(Agence a); //fait
 	public void readAgence(Agence a);
 	public void updateAgence(Agence a);
 	public void deleteAgence(Agence a);
 	
 	//Crud pour l'objet Personne
 	
-	public Map<Integer, Personne> createPersonne(Personne p);
-	public void readPersonne(Personne p);
-	public void updatePersonne(Personne p);
-	public void deletePersonne(Personne p);
+	public void createPersonne(Client cl, ConseillerClientele cc); //fait
+	public void readPersonne(Personne p); //fait
+	public void updatePersonne(Client cl, String nom, String prenom, Adresse adresse, int telephone, boolean typeDeClient); //fait
+	public void deletePersonne(Client cl); //fait
 	
-
-	public void listePersonne(Map<Integer, Personne> personnes);
-	public void attribuerCompte(Client cl, Compte c);  
-	public void ajouterPlacement(Personne p, Placement gp); 
-	public void effectuerVirement(ConseillerClientele cc, Compte c1, Compte c2); 
+	public void attribuerCompte(Client cl, Compte c);  //fait
+	public void ajouterPlacement(Client cl, Placement gp); //fait
+	/*public void effectuerVirement(Compte c1, Compte c2, double mt);
+	 * On va passer par les methodes crediteCompte et debiterCompte direct sur l'interface
+	 */
 	
 	// Crud pour l'objet Compte
 	

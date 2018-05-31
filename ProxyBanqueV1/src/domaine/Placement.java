@@ -4,18 +4,28 @@ public class Placement {
 	
 	//---------- Attributs de la Classe Placement
 	
-	private Client client;
+	private double montant;
 	private String villeDePlacement;
-
+	private Client client;
+	
 	//---------- Constructeur de la Classe Placement
 	
-	public Placement(Client client) {
+	public Placement(double montant, String villeDePlacement) {
 		super();
-		this.client = client;
+		this.montant=montant;
+		this.villeDePlacement=villeDePlacement;
 	}
 	
 	//---------- Getters & Setters
 	
+	public double getMontant() {
+		return montant;
+	}
+
+	public void setMontant(double montant) {
+		this.montant = montant;
+	}
+
 	public Client getClient() {
 		return client;
 	}

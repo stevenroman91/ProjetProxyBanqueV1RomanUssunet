@@ -7,6 +7,7 @@ public class Personne {
 	protected String nom;
 	protected String prenom;
 	protected Adresse adresse;
+	private int idPersonne;
 	
 	//---------- Getters & Setters
 	
@@ -28,9 +29,15 @@ public class Personne {
 	public void setAdresse(Adresse adresse) {
 		this.adresse = adresse;
 	}
+	public int getIdPersonne() {
+		return idPersonne;
+	}
+	public void setIdPersonne(int idPersonne) {
+		this.idPersonne = idPersonne;
+	}
 	
 	//---------- Reecriture de la methode toString
-	
+
 	@Override
 	public String toString() {
 		return "Personne [nom=" + nom + ", prenom=" + prenom + ", adresse=" + adresse + "]";

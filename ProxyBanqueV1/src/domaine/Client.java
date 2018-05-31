@@ -7,11 +7,12 @@ public class Client extends Personne {
 	
 	//---------- Attributs de la Classe Client
 	
+	private int idClient;
 	private int telephone;
 	private boolean typeDeClient;
-	private boolean statutFortune;
+	private ConseillerClientele conseiller;
 	private Collection<Compte> comptes = new ArrayList<Compte>();
-
+	private Collection<Placement> placements = new ArrayList<Placement>();
 	
 	//---------- Constructeur de la Classe Personne 
 
@@ -32,6 +33,14 @@ public class Client extends Personne {
 
 	//---------- Getters & Setters
 	
+	public int getIdClient() {
+		return idClient;
+	}
+
+	public void setIdClient(int idClient) {
+		this.idClient = idClient;
+	}
+	
 	public int getTelephone() {
 		return telephone;
 	}
@@ -47,13 +56,13 @@ public class Client extends Personne {
 	public void setTypeDeClient(boolean typeDeClient) {
 		this.typeDeClient = typeDeClient;
 	}
-
-	public boolean isStatutFortune() {
-		return statutFortune;
+	
+	public ConseillerClientele getConseiller() {
+		return conseiller;
 	}
 
-	public void setStatutFortune(boolean statutFortune) {
-		this.statutFortune = statutFortune;
+	public void setConseiller(ConseillerClientele conseiller) {
+		this.conseiller = conseiller;
 	}
 
 	public Collection<Compte> getComptes() {
@@ -64,8 +73,16 @@ public class Client extends Personne {
 		this.comptes = comptes;
 	}
 	
-	//---------- Reecriture de la methode toString
+	public Collection<Placement> getPlacements() {
+		return placements;
+	}
+
+	public void setPlacements(Collection<Placement> placements) {
+		this.placements = placements;
+	}
 	
+	//---------- Reecriture de la methode toString
+
 	@Override
 	public String toString() {
 		return "Client: nom " + super.nom + ",prenom " + super.prenom +",adresse " + super.adresse+ ", typeDeClient=" + typeDeClient;
