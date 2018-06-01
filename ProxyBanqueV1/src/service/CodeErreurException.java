@@ -1,7 +1,7 @@
 package service;
 /**
  * 
- * @author Quentin Ussunet & Steven Roman
+ * @author Quentin Ussunet et Steven Roman
  *
  */
 public class CodeErreurException extends Exception {

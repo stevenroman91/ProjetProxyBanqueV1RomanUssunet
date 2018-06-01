@@ -5,7 +5,7 @@ import java.util.Collection;
 
 /**
  * 
- * @author Quentin Ussunet & Steven Roman
+ * @author Quentin Ussunet et Steven Roman
  *
  */
 

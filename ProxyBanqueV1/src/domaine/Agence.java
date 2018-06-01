@@ -8,7 +8,7 @@ import java.util.Locale;
 
 /**
  * 
- * @author Quentin Ussunet & Steven Roman
+ * @author Quentin Ussunet et Steven Roman
  *
  * Cette classe agence est caracterisée par son idAgence et sa date de creation
  * Chaque agence a un gérant et une adresse

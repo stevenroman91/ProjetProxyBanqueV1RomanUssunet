@@ -16,7 +16,7 @@ import domaine.SimulationCredit;
 
 /**
  * 
- * @author Quentin Ussunet & Steven Roman
+ * @author Quentin Ussunet et Steven Roman
  * Interface
  *
  */

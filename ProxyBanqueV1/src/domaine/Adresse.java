@@ -2,7 +2,7 @@ package domaine;
 
 /**
  * 
- * @author Quentin Ussunet & Steven Roman
+ * @author Quentin Ussunet et Steven Roman
  * 
  * Cette Classe regroupe tous les elements necessaires à constituer une adresse,
  * Un numéro de rue, une rue, un code postal et une ville.
