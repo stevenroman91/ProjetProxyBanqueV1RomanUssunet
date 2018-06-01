@@ -7,6 +7,8 @@ import domaine.Agence;
 import domaine.CarteBancaire;
 import domaine.Client;
 import domaine.Compte;
+import domaine.CompteCourant;
+import domaine.CompteEpargne;
 import domaine.ConseillerClientele;
 import domaine.Personne;
 import domaine.Placement;
@@ -38,11 +40,12 @@ public interface IService {
 	
 	public Map<Integer, Compte> createCompte(Compte c); //Questions à poser a Eddy
 	public void readCompte(Compte c); //fait
-	public void updateCompte(Compte c, double taux, double decouvert );//Implementation possible dans une prochaine version
+	public void updateCompte(CompteEpargne c, String date);
 	public void deleteCompte(Compte c, Client cl);//Fait mais supprime seulement le compte de la liste des compte du client
 	
 	public void crediterCompte(Compte c, double montant);//Problème de variable, instanciation compte pour getSolde ??
-	public void debiterCompte(Compte c, double montant);//Problème de variable, instanciation compte pour getSolde ??
+	public void debiterCompteCourant(CompteCourant cc, double montant);//Problème de variable, instanciation compte pour getSolde ??
+	public void debiterCompteEpargne(CompteEpargne ce, double montant);
 	public void ajouterCarteBancaire(Compte c, CarteBancaire ca);//fait
 	
 	

@@ -1,6 +1,10 @@
 package domaine;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Date;
+import java.util.Locale;
 
 public class Agence {
 	
@@ -17,10 +21,11 @@ public class Agence {
 		super();
 	}
 	
-	public Agence(String idAgence, String dateDeCreation) {
+	public Agence(String idAgence, String dateF) {
 		super();
 		this.idAgence = idAgence;
-		this.dateDeCreation = dateDeCreation;
+		this.dateDeCreation = dateF;
+;
 	}
 
 	//---------- Getters & Setters

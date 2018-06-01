@@ -13,6 +13,7 @@ public class CompteEpargne extends Compte {
 		super.numeroDeCompte = numeroDeCompte;
 		super.dateOuvertureCompte = dateOuvertureCompte;
 		this.taux = taux;
+		super.typeDeCompte = true;
 	}
 
 	// ---------- Getters & Setters
@@ -26,7 +27,7 @@ public class CompteEpargne extends Compte {
 	public void setTaux(double taux) {
 		this.taux = taux;
 	}
-
+	
 	// ---------- Methode toString
 
 	@Override

@@ -13,6 +13,7 @@ public class CompteCourant extends Compte {
 		super.numeroDeCompte = numeroDeCompte;
 		super.dateOuvertureCompte = dateOuvertureCompte;
 		this.decouvert = decouvert;
+		super.typeDeCompte = false;
 	}
 
 	// ---------- Getters & Setters

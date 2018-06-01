@@ -8,6 +8,8 @@ import domaine.Agence;
 import domaine.CarteBancaire;
 import domaine.Client;
 import domaine.Compte;
+import domaine.CompteCourant;
+import domaine.CompteEpargne;
 import domaine.ConseillerClientele;
 import domaine.Gerant;
 import domaine.Personne;
@@ -121,8 +123,18 @@ public class ServiceImpl implements IService {
 	}
 
 	@Override
-	public void updateCompte(Compte c, double taux, double decouvert) {
+	public void updateCompte(CompteEpargne c, String date) {
 		// TODO Auto-generated method stub
+
+		int strdateCreation[] = new int[date.length()];
+		int dateAujourdhui[] = new int[date.length()];
+
+		for (int i = 0; i < date.length(); i++) {
+			strdateCreation[i] = c.getDateOuvertureCompte().toCharArray()[i];
+			dateAujourdhui[i] = date.toCharArray()[i];
+		}
+		
+		
 
 	}
 
@@ -136,14 +148,29 @@ public class ServiceImpl implements IService {
 	@Override
 	public void crediterCompte(Compte c, double montant) {
 		// TODO Auto-generated method stub
-		c.getSolde() += montant; //Besoin d'implémentation solde ??
+		// gerer en interface le problème du mt négatif ou String
+		double solde = c.getSolde() + montant;
+		c.setSolde(solde);
 	}
 
 	@Override
-	public void debiterCompte(Compte c, double montant) {
+	public void debiterCompteCourant(CompteCourant cc, double montant) {
 		// TODO Auto-generated method stub
-		if (montant < c.getSolde()) {
-			c.getSolde() -= montant; //Besoin d'implémentation solde ??
+
+		if (cc.getSolde() - montant > -cc.getDecouvert()) {
+			double solde = cc.getSolde() - montant;
+			cc.setSolde(solde);
+		}
+
+	}
+
+	@Override
+	public void debiterCompteEpargne(CompteEpargne ce, double montant) {
+		// TODO Auto-generated method stub
+
+		if (ce.getSolde() - montant > 0) {
+			double solde = ce.getSolde() - montant;
+			ce.setSolde(solde);
 		}
 
 	}
@@ -159,14 +186,14 @@ public class ServiceImpl implements IService {
 	@Override
 	public void createSimulationCredit(SimulationCredit sim) {
 		// TODO Auto-generated method stub
-				
+
 	}
 
 	@Override
 	public void readSimulationCredit(SimulationCredit sim) {
 		// TODO Auto-generated method stub
 		System.out.println(sim.toString());
-		
+
 	}
 
 	@Override
@@ -190,7 +217,6 @@ public class ServiceImpl implements IService {
 	@Override
 	public void createCarteBancaire(CarteBancaire carte) {
 		// TODO Auto-generated method stub
-		
 
 	}
 

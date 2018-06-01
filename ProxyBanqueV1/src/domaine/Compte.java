@@ -12,6 +12,10 @@ public class Compte {
 	protected Client titulaireduCompte;
 	protected String dateOuvertureCompte;
 	protected CarteBancaire carte;
+	/* cette variable nous permet de de pas demander le type de compte
+	pour faire une operation du type verser ou retirer, on demande juste un
+	compte et un mt*/
+	protected boolean typeDeCompte; 
 	
 		
 	
@@ -46,6 +50,12 @@ public class Compte {
 	}
 	public void setCarte(CarteBancaire carte) {
 		this.carte = carte;
+	}
+	public boolean isTypeDeCompte() {
+		return typeDeCompte;
+	}
+	public void setTypeDeCompte(boolean typeDeCompte) {
+		this.typeDeCompte = typeDeCompte;
 	}
 	
 	// ---------- Reecriture de la methode toString
