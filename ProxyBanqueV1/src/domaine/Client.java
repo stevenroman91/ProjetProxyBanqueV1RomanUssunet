@@ -20,6 +20,8 @@ public class Client extends Personne {
 	private Collection<Compte> comptes = new ArrayList<Compte>();
 	private Collection<Placement> placements = new ArrayList<Placement>();
 	
+	int i=0;
+	
 	//---------- Constructeur de la Classe Personne 
 
 	/**
@@ -34,6 +36,7 @@ public class Client extends Personne {
 		super.nom = nom;
 		super.prenom = prenom;
 		super.adresse = adresse;
+		this.idClient = i++;
 	}
 	
 	/**
@@ -49,6 +52,7 @@ public class Client extends Personne {
 		super.prenom = prenom;
 		super.adresse = adresse;
 		this.typeDeClient = typeDeClient;
+		this.idClient = i++;
 	}
 
 	//---------- Getters & Setters
