@@ -109,9 +109,10 @@ public class ServiceImpl implements IService {
 			cl.getComptes().remove(compte);
 
 		}
-
-		personnes.remove(cl);
-
+		
+	
+		cl.getConseiller().getClients().remove(cl);
+		cl.setConseiller(null);
 	}
 
 	@Override

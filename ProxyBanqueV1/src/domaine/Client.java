@@ -19,7 +19,7 @@ public class Client extends Personne {
 	private ConseillerClientele conseiller;
 	private Collection<Compte> comptes = new ArrayList<Compte>();
 	private Collection<Placement> placements = new ArrayList<Placement>();
-	
+	private static int nbClient=100000;
 	
 	//---------- Constructeur de la Classe Personne 
 
@@ -30,12 +30,12 @@ public class Client extends Personne {
 	 * @param adresse adresse de la personne
 	 */
 	
-	public Client(String nom,String prenom, Adresse adresse, int idClient) {
+	public Client(String nom,String prenom, Adresse adresse) {
 		super();
 		super.nom = nom;
 		super.prenom = prenom;
 		super.adresse = adresse;
-		this.idClient = idClient;
+		this.idClient = nbClient++;
 
 	}
 	
@@ -46,13 +46,13 @@ public class Client extends Personne {
 	 * @param adresse adresse de la personne
 	 * @param typeDeClient particulier ou entreprise
 	 */
-	public Client(String nom,String prenom, Adresse adresse, boolean typeDeClient, int idClient) {
+	public Client(String nom,String prenom, Adresse adresse, boolean typeDeClient) {
 		super();
 		super.nom = nom;
 		super.prenom = prenom;
 		super.adresse = adresse;
 		this.typeDeClient = typeDeClient;
-		this.idClient = idClient;
+		this.idClient = nbClient++;
 
 	}
 

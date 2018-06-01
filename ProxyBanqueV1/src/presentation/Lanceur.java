@@ -54,6 +54,7 @@ public class Lanceur {
 		System.out.println("Taper 2 si vous êtes un Conseiller Clientèle");
 		System.out.println("Taper 0 pour Sortir");
 		int choix = sc.nextInt();
+		String str;
 
 		while (choix != 0) {
 
@@ -115,9 +116,7 @@ public class Lanceur {
 								System.out.println("------- CREATION NOUVEAU CLIENT -------");
 								System.out.println("Saisie des Informations du nouveau Client"); // Choix du type de
 																									// client ??
-								// demande idClient
-								System.out.println("idClient :");
-								int idClient = sc.nextInt();
+
 								// demande du nom
 								System.out.println("Nom :");
 								String nom = sc.next();
@@ -126,24 +125,26 @@ public class Lanceur {
 								// demande du prenom
 								System.out.println("prenom :");
 								String prenom = sc.next();
+								str=sc.nextLine();
 								// cl.setPrenom(prenom);
 								// System.out.println(cl.getPrenom());
 								System.out.println("Coordonnées :");
 								System.out.println("adresse :");
-								System.out.println("Merci de remplacer les espaces par des '-' ");
-								String adresse = sc.next();
+								//System.out.println("Merci de remplacer les espaces par des '-' ");
+								String adresse = sc.nextLine();
 								// adresse1.setAdresse(adresse);
 								// System.out.println(adresse1.getAdresse());
 								System.out.println("code postal :");
 								int codePostal = sc.nextInt();
+								str=sc.nextLine();
 								// adresse1.setCodePostal(codePostal);
 								System.out.println("ville :");
-								System.out.println("Merci de remplacer les espaces par des '-' ");
-								String ville = sc.next();
+								//System.out.println("Merci de remplacer les espaces par des '-' ");
+								String ville= sc.nextLine();
 								// adresse1.setVille(ville);
 
 								Adresse adresse1 = new Adresse(adresse, codePostal, ville);
-								Client cl = new Client(nom, prenom, adresse1, idClient);
+								Client cl = new Client(nom, prenom, adresse1);
 
 								cl.setConseiller(cc);
 								cc.getClients().add(cl);
