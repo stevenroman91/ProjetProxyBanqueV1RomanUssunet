@@ -213,12 +213,26 @@ public class Lanceur {
 								System.out.println("---------- SUPPRESSION CLIENT -----------");
 								System.out.println(cc.getClients());
 								System.out.println("Veuillez saisir l'idClient d'un client à modifier");
+								int idClient = sc.nextInt();
+								for (Client client : cc.getClients()) {
+									if (client.getIdClient() == idClient) {
+										service.deletePersonne(client);
+									}
+
+								}
+								
 
 							} else if (choix3 == 4) {
 								System.out.println("------- LIRE INFOS CLIENT --------");
 								System.out.println(cc.getClients());
 								System.out.println("Veuillez saisir l'idClient d'un client à modifier");
+								int idClient = sc.nextInt();
+								for (Client client : cc.getClients()) {
+									if (client.getIdClient() == idClient) {
+										service.readPersonne(client);
+									}
 
+								}
 							} else {
 								System.out.println("MAUVAIS CHOIX, MERCI DE RESAISSIR");
 							}
