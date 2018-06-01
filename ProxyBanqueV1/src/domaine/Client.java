@@ -3,6 +3,12 @@ package domaine;
 import java.util.ArrayList;
 import java.util.Collection;
 
+/**
+ * 
+ * @author Quentin Ussunet & Steven Roman
+ *
+ */
+
 public class Client extends Personne {
 	
 	//---------- Attributs de la Classe Client
@@ -16,6 +22,13 @@ public class Client extends Personne {
 	
 	//---------- Constructeur de la Classe Personne 
 
+	/**
+	 * Constructeur de la classe Personne
+	 * @param nom nom de la personne
+	 * @param prenom prenom de la personne
+	 * @param adresse adresse de la personne
+	 */
+	
 	public Client(String nom,String prenom, Adresse adresse) {
 		super();
 		super.nom = nom;
@@ -23,6 +36,13 @@ public class Client extends Personne {
 		super.adresse = adresse;
 	}
 	
+	/**
+	 * 
+	 * @param nom nom de la personne
+	 * @param prenom prenom de la personne
+	 * @param adresse adresse de la personne
+	 * @param typeDeClient particulier ou entreprise
+	 */
 	public Client(String nom,String prenom, Adresse adresse, boolean typeDeClient) {
 		super();
 		super.nom = nom;
@@ -36,7 +56,10 @@ public class Client extends Personne {
 	public int getIdClient() {
 		return idClient;
 	}
-
+	/**
+	 * 
+	 * @param idClient permet de reperer le client
+	 */
 	public void setIdClient(int idClient) {
 		this.idClient = idClient;
 	}
@@ -44,7 +67,10 @@ public class Client extends Personne {
 	public int getTelephone() {
 		return telephone;
 	}
-
+	/**
+	 * 
+	 * @param telephone telephone du client
+	 */
 	public void setTelephone(int telephone) {
 		this.telephone = telephone;
 	}
@@ -53,6 +79,10 @@ public class Client extends Personne {
 		return typeDeClient;
 	}
 
+	/**
+	 * 
+	 * @param typeDeClient particulier ou entreprise
+	 */
 	public void setTypeDeClient(boolean typeDeClient) {
 		this.typeDeClient = typeDeClient;
 	}
@@ -60,7 +90,10 @@ public class Client extends Personne {
 	public ConseillerClientele getConseiller() {
 		return conseiller;
 	}
-
+	/**
+	 * 
+	 * @param conseiller qui est son conseiller
+	 */
 	public void setConseiller(ConseillerClientele conseiller) {
 		this.conseiller = conseiller;
 	}
@@ -69,6 +102,10 @@ public class Client extends Personne {
 		return comptes;
 	}
 
+	/**
+	 * 
+	 * @param comptes liste de ses comptes
+	 */
 	public void setComptes(Collection<Compte> comptes) {
 		this.comptes = comptes;
 	}
@@ -76,7 +113,10 @@ public class Client extends Personne {
 	public Collection<Placement> getPlacements() {
 		return placements;
 	}
-
+	/**
+	 * 
+	 * @param placements liste de ses placements
+	 */
 	public void setPlacements(Collection<Placement> placements) {
 		this.placements = placements;
 	}

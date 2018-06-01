@@ -1,5 +1,9 @@
 package domaine;
-
+/**
+ * 
+ * @author Quentin Ussunet & Steven Roman
+ *
+ */
 public class Placement {
 	
 	//---------- Attributs de la Classe Placement
@@ -9,7 +13,11 @@ public class Placement {
 	private Client client;
 	
 	//---------- Constructeur de la Classe Placement
-	
+	/**
+	 * Constructeur
+	 * @param montant montant du placement à effectuer
+	 * @param villeDePlacement ville où on veut investir
+	 */
 	public Placement(double montant, String villeDePlacement) {
 		super();
 		this.montant=montant;
@@ -21,7 +29,10 @@ public class Placement {
 	public double getMontant() {
 		return montant;
 	}
-
+	/**
+	 * 
+	 * @param montant montant a placer
+	 */
 	public void setMontant(double montant) {
 		this.montant = montant;
 	}
@@ -29,7 +40,10 @@ public class Placement {
 	public Client getClient() {
 		return client;
 	}
-
+	/**
+	 * 
+	 * @param client client qui veut faire le placement
+	 */
 	public void setClient(Client client) {
 		this.client = client;
 	}
@@ -37,7 +51,10 @@ public class Placement {
 	public String getVilleDePlacement() {
 		return villeDePlacement;
 	}
-
+	/**
+	 * 
+	 * @param villeDePlacement ville où on veut investir
+	 */
 	public void setVilleDePlacement(String villeDePlacement) {
 		this.villeDePlacement = villeDePlacement;
 	}

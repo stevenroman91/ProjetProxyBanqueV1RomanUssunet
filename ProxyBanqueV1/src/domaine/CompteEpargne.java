@@ -1,5 +1,9 @@
 package domaine;
-
+/**
+ * 
+ * @author Quentin Ussunet & Steven Roman
+ *
+ */
 public class CompteEpargne extends Compte {
 
 	// ---------- Attributs de la Classe Adresse
@@ -8,6 +12,12 @@ public class CompteEpargne extends Compte {
 
 	// ---------- Constructeurs de la Classe Adresse
 	
+	/**
+	 * Constructeur du compteEpargne
+	 * @param numeroDeCompte numero de compte
+	 * @param dateOuvertureCompte date d'ouverture du compte
+	 * @param taux taux du compte
+	 */
 	public CompteEpargne(int numeroDeCompte, String dateOuvertureCompte, double taux) {
 		super();
 		super.numeroDeCompte = numeroDeCompte;
@@ -22,7 +32,10 @@ public class CompteEpargne extends Compte {
 		return taux;
 	}
 
-
+	/**
+	 * 
+	 * @param taux taux d'interet du compte
+	 */
 
 	public void setTaux(double taux) {
 		this.taux = taux;

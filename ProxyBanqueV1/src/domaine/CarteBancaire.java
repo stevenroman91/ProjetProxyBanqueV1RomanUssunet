@@ -1,5 +1,11 @@
 package domaine;
 
+/**
+ * 
+ * @author Quentin Ussunet & Steven Roman
+ *
+ */
+
 public class CarteBancaire {
 	
 	//---------- Attributs de la Classe Carte Bancaire
@@ -18,6 +24,12 @@ public class CarteBancaire {
 		super();
 	}
 	
+	/**
+	 * 
+	 * @param compte on associe une carte à un compte
+	 * @param typeDeCarte et on type la carte car ça pourrait être une carte Premium ou Electron
+	 */
+	
 	public CarteBancaire(Compte compte, boolean typeDeCarte) {
 		super();
 		this.compte = compte;
@@ -30,36 +42,61 @@ public class CarteBancaire {
 	public int getCodeCarte() {
 		return codeCarte;
 	}
+	
+	/**
+	 * 
+	 * @param codeCarte code de la carte qui peut eventuellment etre changé
+	 */
 	public void setCodeCarte(int codeCarte) {
 		this.codeCarte = codeCarte;
 	}
 	public Compte getCompte() {
 		return compte;
 	}
+	/**
+	 * 
+	 * @param compte compte au quel la carte est rataché
+	 */
 	public void setCompte(Compte compte) {
 		this.compte = compte;
 	}
 	public boolean isTypeDeCarte() {
 		return typeDeCarte;
 	}
+	/**
+	 * 
+	 * @param typeDeCarte Electron ou Premium
+	 */
 	public void setTypeDeCarte(boolean typeDeCarte) {
 		this.typeDeCarte = typeDeCarte;
 	}
 	public String getDateCreation() {
 		return dateCreation;
 	}
+	/**
+	 * 
+	 * @param dateCreation date de creation
+	 */
 	public void setDateCreation(String dateCreation) {
 		this.dateCreation = dateCreation;
 	}
 	public String getDateExpiration() {
 		return dateExpiration;
 	}
+	/**
+	 * 
+	 * @param dateExpiration date d'expiration qui peut etre changé
+	 */
 	public void setDateExpiration(String dateExpiration) {
 		this.dateExpiration = dateExpiration;
 	}
 	public int getCryptogramme() {
 		return cryptogramme;
 	}
+	/**
+	 * 
+	 * @param cryptogramme crypto de la carte
+	 */
 	public void setCryptogramme(int cryptogramme) {
 		this.cryptogramme = cryptogramme;
 	}
@@ -68,6 +105,10 @@ public class CarteBancaire {
 		return etatCarte;
 	}
 
+	/**
+	 * 
+	 * @param etatCarte nous permet de savoir si la carte est active ou pas
+	 */
 	public void setEtatCarte(boolean etatCarte) {
 		this.etatCarte = etatCarte;
 	}

@@ -1,5 +1,9 @@
 package domaine;
-
+/**
+ * 
+ * @author Quentin Ussunet & Steven Roman
+ *
+ */
 public class CompteCourant extends Compte {
 
 	// ---------- Attributs de la Classe Adresse
@@ -7,6 +11,12 @@ public class CompteCourant extends Compte {
 	private double decouvert = 1000;
 
 	// ---------- Constructeurs de la Classe Adresse
+	/**
+	 * On ne construit pas dans la classe mere dans se cas
+	 * @param numeroDeCompte numero de compte
+	 * @param dateOuvertureCompte date d'ouverture de compte
+	 * @param decouvert decouvert autorisé
+	 */
 	
 	public CompteCourant(int numeroDeCompte, String dateOuvertureCompte, double decouvert) {
 		super();
@@ -22,6 +32,10 @@ public class CompteCourant extends Compte {
 		return decouvert;
 	}
 
+	/**
+	 * 
+	 * @param decouvert decouvert autorisé
+	 */
 	public void setDecouvert(double decouvert) {
 		this.decouvert = decouvert;
 	}

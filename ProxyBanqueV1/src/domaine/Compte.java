@@ -3,6 +3,12 @@ package domaine;
 import java.util.ArrayList;
 import java.util.Collection;
 
+/**
+ * 
+ * @author Quentin Ussunet & Steven Roman
+ *
+ */
+
 public class Compte {
 	
 	//---------- Attributs de la Classe Adresse 
@@ -24,36 +30,60 @@ public class Compte {
 	public int getNumeroDeCompte() {
 		return numeroDeCompte;
 	}
+	/**
+	 * 
+	 * @param numeroDeCompte nous permet d'identifier le compte
+	 */
 	public void setNumeroDeCompte(int numeroDeCompte) {
 		this.numeroDeCompte = numeroDeCompte;
 	}
 	public double getSolde() {
 		return solde;
 	}
+	/**
+	 * 
+	 * @param solde quantite de resources dans le compte
+	 */
 	public void setSolde(double solde) {
 		this.solde = solde;
 	}
 	public Client getTitulaireduCompte() {
 		return titulaireduCompte;
 	}
+	/**
+	 * 
+	 * @param titulaireduCompte client titulaire du compre
+	 */
 	public void setTitulaireduCompte(Client titulaireduCompte) {
 		this.titulaireduCompte = titulaireduCompte;
 	}
 	public String getDateOuvertureCompte() {
 		return dateOuvertureCompte;
 	}
+	/**
+	 * 
+	 * @param dateOuvertureCompte date d'ouverture du compte
+	 */
 	public void setDateOuvertureCompte(String dateOuvertureCompte) {
 		this.dateOuvertureCompte = dateOuvertureCompte;
 	}
 	public CarteBancaire getCarte() {
 		return carte;
 	}
+	/**
+	 * 
+	 * @param carte carte associée au compte
+	 */
 	public void setCarte(CarteBancaire carte) {
 		this.carte = carte;
 	}
 	public boolean isTypeDeCompte() {
 		return typeDeCompte;
 	}
+	/**
+	 * 
+	 * @param typeDeCompte epargne ou courant
+	 */
 	public void setTypeDeCompte(boolean typeDeCompte) {
 		this.typeDeCompte = typeDeCompte;
 	}
