@@ -20,6 +20,7 @@ public class Client extends Personne {
 	private Collection<Compte> comptes = new ArrayList<Compte>();
 	private Collection<Placement> placements = new ArrayList<Placement>();
 	
+	
 	//---------- Constructeur de la Classe Personne 
 
 	/**
@@ -29,11 +30,12 @@ public class Client extends Personne {
 	 * @param adresse adresse de la personne
 	 */
 	
-	public Client(String nom,String prenom, Adresse adresse) {
+	public Client(String nom,String prenom, Adresse adresse, int idClient) {
 		super();
 		super.nom = nom;
 		super.prenom = prenom;
 		super.adresse = adresse;
+		this.idClient = idClient;
 	}
 	
 	/**
@@ -43,12 +45,13 @@ public class Client extends Personne {
 	 * @param adresse adresse de la personne
 	 * @param typeDeClient particulier ou entreprise
 	 */
-	public Client(String nom,String prenom, Adresse adresse, boolean typeDeClient) {
+	public Client(String nom,String prenom, Adresse adresse, boolean typeDeClient, int idClient) {
 		super();
 		super.nom = nom;
 		super.prenom = prenom;
 		super.adresse = adresse;
 		this.typeDeClient = typeDeClient;
+		this.idClient = idClient;
 	}
 
 	//---------- Getters & Setters
@@ -125,7 +128,7 @@ public class Client extends Personne {
 
 	@Override
 	public String toString() {
-		return "Client: nom " + super.nom + ",prenom " + super.prenom +",adresse " + super.adresse+ ", typeDeClient=" + typeDeClient;
+		return "\n Client: idClient = "+ idClient + ",nom = " + super.nom + ",prenom = " + super.prenom +",adresse = " + super.adresse+ ", typeDeClient = " + typeDeClient;
 				}
 
 }
